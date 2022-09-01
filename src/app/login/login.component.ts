@@ -25,7 +25,15 @@ export class LoginComponent implements OnInit {
 
   itemClicked(){
     console.log(this.userid, this.password);
-    console.log(this.users.length)
+    let user = {'username': this.userid, 'password': this.password}
+    if (typeof(Storage) !== "undefined"){
+      console.log('storage ready');
+      // localStorage.setItem(user.username, user.password);
+      let sessionData = JSON.stringify(user);
+      sessionStorage.setItem("user", sessionData);
+      console.log(sessionStorage.getItem("user"));
+      sessionStorage.clear();
+    }
     // this.router.navigate('/account:userid')
     for (let i = 0; i < this.users.length; i ++){
       if (this.userid == this.users[i].userid && this.password == this.users[i].password) {
