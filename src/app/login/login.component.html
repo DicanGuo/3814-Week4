@@ -4,7 +4,8 @@
       <form id="loginform">
         <input type="text" [(ngModel)]="userid" id="userid" class="fadeIn second" name="login" placeholder="login"><br><br>
         <input type="password" [(ngModel)]="password" id="password" class="fadeIn third" name="login" placeholder="password">
-        <button (click)="itemClicked()" type="button" class="fadeIn fourth" value="Log In">Log</button>
+        <button (click)="postLogin()" id="submit" type="button" class="fadeIn fourth" value="Log In">Log</button>
       </form>
     </div>
   </div>
+

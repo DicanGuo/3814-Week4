@@ -1,6 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -22,4 +23,10 @@ export class AppComponent {
   //   this.router.navigate('/account', id);
     
   // }
+  logout(){
+
+    sessionStorage.clear();
+    console.log(sessionStorage.getItem("user"));
+
+  }
 }

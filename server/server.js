@@ -30,6 +30,5 @@ app.post('/api/auth', (req,res)=>{
     res.send(customer.username, customer.birthdate, customer.age, customer.email, customer.valid);
 });
 
-require('./route/api-login.js')(app, path);
+// require('./routes/login.js')(app, path);
 require('./listen/js')(http);
-
